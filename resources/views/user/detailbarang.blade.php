@@ -496,11 +496,12 @@
 
                      <!-- Social media icons dengan jarak antar ikon -->
                      <div class="social-icons mt-3">
-                         <a href="#" class="text-white m-sm-3"><i class="fab fa-twitter fa-2x"></i></a>
-                         <a href="#" class="text-white m-sm-3"><i class="fab fa-facebook fa-2x"></i></a>
-                         <a href="#" class="text-white m-sm-3"><i class="fab fa-instagram fa-2x"></i></a>
-                         <a href="#" class="text-white m-sm-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                         <a href="#" class="text-white social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+                         <a href="#" class="text-white social-icon"><i class="fab fa-facebook fa-2x"></i></a>
+                         <a href="#" class="text-white social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+                         <a href="#" class="text-white social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
                      </div>
+
                  </div>
              </div>
          </div>
