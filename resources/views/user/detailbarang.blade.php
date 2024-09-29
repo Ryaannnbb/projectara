@@ -489,7 +489,7 @@
                         </li>
                     </ul>
                     <!-- Social media icons dengan jarak antar ikon -->
-                    <div class="social-icons mt-3">
+                    <div class="social-icons mt-3"> 
                         <a href="#" class="text-white m-sm-3"><i class="fab fa-twitter fa-2x"></i></a>
                         <a href="#" class="text-white m-sm-3"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="#" class="text-white m-sm-3"><i class="fab fa-instagram fa-2x"></i></a>
