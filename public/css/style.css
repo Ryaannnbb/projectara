@@ -3466,3 +3466,19 @@ ol {
 		font-size: 24px;
 	}
 }
+.list-unstyled li {
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 10px; 
+}
+
+.contact-label {
+    width: 80px; 
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+.contact-value {
+    flex: 1; 
+    word-wrap: break-word; 
+}
