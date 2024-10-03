@@ -3469,7 +3469,7 @@ ol {
 .list-unstyled li {
     display: flex; 
     align-items: flex-start; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .contact-label {
@@ -3479,13 +3479,269 @@ ol {
 }
 
 .contact-value {
-    flex: 1; 
+    flex: 1;
     word-wrap: break-word; 
 }
 .social-icons a {
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .social-icons a:last-child {
     margin-right: 0; 
+}
+/* halaman baru */
+/* about */
+.about-section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 20px;
+	height: 100vh;
+	background-color: #ffffff;
+}
+
+.about-image {
+	margin-right: 200px; 
+}
+
+.about-image img {
+	width: 450px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.about-content {
+	max-width: 600px;
+	text-align: left;
+}
+
+.about-content h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FF8F1C;
+}
+
+.about-content p {
+	font-size: 1rem;
+	color: #555;
+}
+
+@media (max-width: 768px) {
+	.about-section {
+		flex-direction: column;
+	}
+
+	.about-image {
+		margin-right: 0;
+		margin-bottom: 20px; 
+	}
+}
+
+@media (max-width: 576px) {
+	.about-image img {
+		width: 100%;
+	}
+
+	.about-content h2 {
+		font-size: 1.5rem;
+	}
+
+	.about-content p {
+		font-size: 0.9rem;
+	}
+}
+/* visi */
+.visi-misi-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.visi-misi-content {
+	flex: 1;
+	padding: 20px;
+}
+
+.visi-misi-content h2 {
+	font-size: 28px;
+	color: #f57c00;
+	margin-bottom: 10px;
+}
+
+.visi-misi-content p {
+	font-size: 16px;
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.visi-misi-image {
+	flex: 1;
+	position: relative;
+	padding: 20px;
+}
+
+.visi-misi-image img {
+	width: 100%;
+	border-radius: 15px;
+	object-fit: cover;
+	max-width: 500px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+	.visi-misi-section {
+		flex-direction: column;
+	}
+
+	.visi-misi-content h2 {
+		font-size: 24px;
+	}
+
+	.visi-misi-content p {
+		font-size: 14px;
+	}
+
+	.visi-misi-image {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.visi-misi-content h2 {
+		font-size: 20px;
+	}
+
+	.visi-misi-content p {
+		font-size: 12px;
+	}
+
+	.visi-misi-image img {
+		max-width: 300px;
+	}
+}
+/* company */
+.company-section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 20px;
+	height: 75vh;
+	background-color: #ffffff;
+}
+
+.company-image {
+	margin-right: 200px; 
+}
+
+.company-image img {
+	width: 350px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.company-content {
+	max-width: 600px;
+	text-align: left;
+}
+
+.company-content h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FF8F1C;
+}
+
+.company-content p {
+	font-size: 1rem;
+	color: #555;
+}
+
+@media (max-width: 768px) {
+	.about-section {
+		flex-direction: column;
+	}
+
+	.company-image {
+		margin-right: 0;
+		margin-bottom: 20px; 
+	}
+}
+
+@media (max-width: 576px) {
+	.company-image img {
+		width: 75%;
+	}
+
+	.company-content h2 {
+		font-size: 1.5rem;
+	}
+
+	.company-content p {
+		font-size: 0.9rem;
+	}
+}
+/* legality */
+.legality {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	min-height: 70vh;
+}
+
+.card {
+	background: linear-gradient( #FBC30080, #3D341880);
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	max-width: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+.card-body h2 {
+	font-size: 28px;
+	color: #807513;
+	margin-bottom: 15px;
+}
+
+.card-body p {
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 1.6;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+	.card-body h2 {
+		font-size: 24px;
+	}
+
+	.card-body p {
+		font-size: 14px;
+	}
+
+	.card {
+		padding: 20px;
+		margin: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.card-body h2 {
+		font-size: 20px;
+	}
+
+	.card-body p {
+		font-size: 12px;
+	}
+
+	.card {
+		padding: 15px;
+		margin: 15px;
+	}
 }
