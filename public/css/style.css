@@ -3745,3 +3745,251 @@ ol {
 		margin: 15px;
 	}
 }
+/* navbar */
+.navbar-brand img {
+	max-width: 100px;
+}
+
+.contact-info {
+	display:flex;
+	align-items: center;
+	color: white;
+}
+
+.contact-info .icon {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.contact-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-text p {
+	margin: 0;
+}
+
+@media (min-width: 992px) {
+	.navbar-nav {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact-info {
+		margin-left: 700px;
+	}
+}
+
+/* hero */
+.hero-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 0, 0.4)), url('background.jpg') no-repeat center center/cover;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-content {
+    color: white;
+    max-width: 600px;
+}
+
+.text-content p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content .subtext {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-yellow {
+    background-color: #FFC107;
+    color: white;
+}
+
+.btn-green {
+    background-color: #28A745;
+    color: white;
+}
+
+.image-content {
+    position: relative;
+}
+
+.organic-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+    background-color: orange;
+    color: white;
+    padding: 15px; 
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-content img {
+    max-width: 450px;
+}
+/* Responsif untuk perangkat tablet */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column; /* Membuat layout berubah vertikal */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .container {
+        flex-direction: column; /* Mengubah susunan menjadi kolom */
+        align-items: center;
+    }
+
+    .text-content h1 {
+        font-size: 36px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .image-content img {
+        max-width: 350px;
+    }
+}
+
+/* Responsif untuk perangkat ponsel */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text p {
+        font-size: 12px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    .text-content .subtext {
+        font-size: 14px;
+    }
+
+    .buttons .btn {
+        font-size: 14px;
+    }
+
+    .image-content img {
+        max-width: 250px;
+    }
+
+    .organic-badge {
+        top: 10px;
+        left: 10px;
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+}
+/* circle */
+img.circle {
+    border-radius: 50%;
+    width: 100px; /* Atur lebar sesuai kebutuhan */
+    height: 100px; /* Atur tinggi sesuai kebutuhan */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Jarak di bawah gambar */
+}
+
+/* Centering text for circle section */
+.circle-text {
+    margin-top: 10vh;  /* Jarak atas untuk teks */
+	text-align: left;
+}
+
+.p1 {
+    font-size: 1rem;
+    color: #666; /* Warna teks */
+}
+
+.p2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; /* Warna teks */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circle-text {
+        text-align: center;
+        margin-top: 5vh; /* Jarak atas pada tampilan kecil */
+    }
+
+    .p2 {
+        font-size: 1.5rem; /* Ukuran font untuk tampilan kecil */
+    }
+
+    .row {
+        flex-direction: column; /* Membuat elemen stacked di tampilan kecil */
+        align-items: center; /* Mengatur elemen agar di tengah */
+    }
+}
