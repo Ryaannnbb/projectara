@@ -3497,12 +3497,12 @@ ol {
 	align-items: center;
 	justify-content: center;
 	padding: 50px 20px;
-	height: 100vh;
+	height: auto; 
 	background-color: #ffffff;
 }
 
 .about-image {
-	margin-right: 200px; 
+	margin-right: 140px; 
 }
 
 .about-image img {
@@ -3527,30 +3527,38 @@ ol {
 	color: #555;
 }
 
+/* Responsif untuk layar tablet */
 @media (max-width: 768px) {
 	.about-section {
 		flex-direction: column;
+		text-align: center; 
 	}
 
 	.about-image {
 		margin-right: 0;
-		margin-bottom: 20px; 
+		margin-bottom: 20px;
+	}
+
+	.about-content {
+		text-align: center; 
 	}
 }
 
+/* Responsif untuk layar ponsel */
 @media (max-width: 576px) {
 	.about-image img {
-		width: 100%;
+		width: 100%; 
 	}
 
 	.about-content h2 {
-		font-size: 1.5rem;
+		font-size: 1.5rem; 
 	}
 
 	.about-content p {
-		font-size: 0.9rem;
+		font-size: 0.9rem; 
 	}
 }
+
 /* visi */
 .visi-misi-section {
 	display: flex;
@@ -3635,7 +3643,7 @@ ol {
 }
 
 .company-image {
-	margin-right: 200px; 
+	margin-right: 140px; 
 }
 
 .company-image img {
@@ -3661,27 +3669,35 @@ ol {
 }
 
 @media (max-width: 768px) {
-	.about-section {
+	.company-section {
 		flex-direction: column;
+		align-items: center; 
 	}
 
 	.company-image {
 		margin-right: 0;
 		margin-bottom: 20px; 
 	}
+
+	.company-content {
+		text-align: center; 
+	}
 }
 
+/* Responsif untuk layar ponsel */
 @media (max-width: 576px) {
 	.company-image img {
 		width: 75%;
+		display: block;
+		margin: 0 auto; 
 	}
 
 	.company-content h2 {
-		font-size: 1.5rem;
+		font-size: 1.5rem; 
 	}
 
 	.company-content p {
-		font-size: 0.9rem;
+		font-size: 0.9rem; 
 	}
 }
 /* legality */
@@ -3798,7 +3814,13 @@ ol {
     width: 100%;
     max-width: 1200px;
 }
-
+.linear {
+    background: linear-gradient(to right, #FF8A00, #ffffff); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 3rem; 
+    font-weight: bold; 
+}
 .text-content {
     color: white;
     max-width: 600px;
@@ -3873,7 +3895,7 @@ ol {
 /* Responsif untuk perangkat tablet */
 @media (max-width: 1024px) {
     .hero-section {
-        flex-direction: column; /* Membuat layout berubah vertikal */
+        flex-direction: column; 
         text-align: center;
         padding: 30px;
     }
@@ -3953,43 +3975,43 @@ ol {
 /* circle */
 img.circle {
     border-radius: 50%;
-    width: 100px; /* Atur lebar sesuai kebutuhan */
-    height: 100px; /* Atur tinggi sesuai kebutuhan */
-    object-fit: cover; /* Menjaga proporsi gambar */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px; /* Jarak di bawah gambar */
+    margin-bottom: 10px; 
 }
 
 /* Centering text for circle section */
 .circle-text {
-    margin-top: 10vh;  /* Jarak atas untuk teks */
+    margin-top: 10vh;  
 	text-align: left;
 }
 
 .p1 {
     font-size: 1rem;
-    color: #666; /* Warna teks */
+    color: #666; 
 }
 
 .p2 {
     font-size: 2rem;
     font-weight: bold;
-    color: #333; /* Warna teks */
+    color: #333; 
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .circle-text {
         text-align: center;
-        margin-top: 5vh; /* Jarak atas pada tampilan kecil */
+        margin-top: 5vh; 
     }
 
     .p2 {
-        font-size: 1.5rem; /* Ukuran font untuk tampilan kecil */
+        font-size: 1.5rem; 
     }
 
     .row {
-        flex-direction: column; /* Membuat elemen stacked di tampilan kecil */
-        align-items: center; /* Mengatur elemen agar di tengah */
+        flex-direction: column; 
+        align-items: center;
     }
 }

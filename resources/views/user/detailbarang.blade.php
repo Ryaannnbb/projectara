@@ -59,8 +59,8 @@
                              <div class="contact-info">
                                  <span class="icon">&#128100;</span>
                                  <div class="contact-text">
-                                     <p>+62 1234 5678</p>
-                                     <p>support 24/7</p>
+                                     <p class="text-white">+62 1234 5678</p>
+                                     <p class="text-white">support 24/7</p>
                                  </div>
                              </div>
                          </li>
@@ -71,9 +71,9 @@
          <section class="hero-section">
              <div class="container">
                  <div class="text-content">
-                     <p>WELCOME TO MY WEBSITE</p>
-                     <h1>ORGANIC FOODS AND VEGETABLES</h1>
-                     <p class="subtext">100% NATURAL CONTAINING ORGANIC INGREDIENTS</p>
+                     <p class="text-white">WELCOME TO MY WEBSITE</p>
+                     <h1 class="linear">ORGANIC FOODS AND VEGETABLES</h1>
+                     <p class="subtext text-white">100% NATURAL CONTAINING ORGANIC INGREDIENTS</p>
                      <div class="buttons">
                          <a href="#" class="btn btn-yellow">SHOP NOW</a>
                          <a href="#" class="btn btn-green">LEARN MORE</a>
