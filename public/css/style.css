@@ -3546,6 +3546,9 @@ ol {
 
 /* Responsif untuk layar ponsel */
 @media (max-width: 576px) {
+	.about-content{
+		margin-top: 10px;
+	}
 	.about-image img {
 		width: 100%; 
 	}
@@ -3570,7 +3573,7 @@ ol {
 
 .visi-misi-content {
 	flex: 1;
-	padding: 20px;
+	padding: 60px;
 }
 
 .visi-misi-content h2 {
