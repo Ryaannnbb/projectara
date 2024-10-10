@@ -3791,7 +3791,6 @@ ol {
     z-index: 2;
 }
 
-
 .navbar {
     background: transparent;
 }
@@ -3820,7 +3819,7 @@ ol {
     margin: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1251px) {
     .navbar-nav {
         margin-left: auto;
         margin-right: auto;
@@ -3831,39 +3830,35 @@ ol {
     }
 }
 
-@media (max-width: 991.98px) {
+
+@media (max-width: 1250px) {
     .navbar-collapse {
-        display: flex;
-        justify-content: center; 
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .navbar-nav {
-        display: flex;
-        justify-content: center; 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info {
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        margin-top: 10px;
-        text-align: center; 
-    }
-
-    .contact-text {
-        text-align: center; 
+        display: none; /* Hide the navbar items initially */
     }
 
     .navbar-toggler {
-        margin-left: auto; 
+        display: flex; /* Show the hamburger icon */
+    }
+
+    .navbar-toggler.collapsed + .navbar-collapse {
+        display: flex; /* Show the navbar items when toggled */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        width: 100%; /* Full width */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Full width */
+        justify-content: center; /* Center items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        margin: 0; /* Reset margins */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Spacing between items when stacked */
     }
 }
-
-
 
 /* hero */
 .hero-section {

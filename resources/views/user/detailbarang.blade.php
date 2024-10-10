@@ -88,42 +88,42 @@
      </div>
 
      <section class="img-circle my-5">
-    <div class="container text-center">
-        <div class="row">
-            <!-- Circle text on top -->
-            <div class="circle-text mb-5 text-left col-12">
-                <p class="p1">POPULAR FOODS AND VEGETARIANS</p>
-                <p class="p2">QUALITY FRUITS AND VEGETABLES</p>
-            </div>
-            <div class="w-100 d-none d-md-block"></div>
-            <div class="col-12">
-                <!-- Circles with images and text below -->
-                <div class="row justify-content-center">
-                    <div class="col-6 col-md-2 text-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 1" class="circle img-fluid">
-                        <p>Apple</p>
-                    </div>
-                    <div class="col-6 col-md-2 text-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 2" class="circle img-fluid">
-                        <p>Banana</p>
-                    </div>
-                    <div class="col-6 col-md-2 text-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Vegetable 1" class="circle img-fluid">
-                        <p>Carrot</p>
-                    </div>
-                    <div class="col-6 col-md-2 text-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Vegetable 2" class="circle img-fluid">
-                        <p>Broccoli</p>
-                    </div>
-                    <div class="col-6 col-md-2 text-center">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 3" class="circle img-fluid">
-                        <p>Orange</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+         <div class="container text-center">
+             <div class="row">
+                 <!-- Circle text on top -->
+                 <div class="circle-text mb-5 text-left col-12">
+                     <p class="p1">POPULAR FOODS AND VEGETARIANS</p>
+                     <p class="p2">QUALITY FRUITS AND VEGETABLES</p>
+                 </div>
+                 <div class="w-100 d-none d-md-block"></div>
+                 <div class="col-12">
+                     <!-- Circles with images and text below -->
+                     <div class="row justify-content-center">
+                         <div class="col-6 col-md-2 text-center">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 1" class="circle img-fluid">
+                             <p>Apple</p>
+                         </div>
+                         <div class="col-6 col-md-2 text-center">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 2" class="circle img-fluid">
+                             <p>Banana</p>
+                         </div>
+                         <div class="col-6 col-md-2 text-center">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Vegetable 1" class="circle img-fluid">
+                             <p>Carrot</p>
+                         </div>
+                         <div class="col-6 col-md-2 text-center">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Vegetable 2" class="circle img-fluid">
+                             <p>Broccoli</p>
+                         </div>
+                         <div class="col-6 col-md-2 text-center">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s" alt="Fruit 3" class="circle img-fluid">
+                             <p>Orange</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
 
 
 
