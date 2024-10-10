@@ -3686,9 +3686,15 @@ ol {
 
 /* Responsif untuk layar ponsel */
 @media (max-width: 576px) {
+	@media (max-width: 768px) {
+		.company-section {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
 	.company-image img {
 		width: 75%;
-		display: block;
+		display: flex;
 		margin: 0 auto; 
 	}
 
@@ -3828,18 +3834,35 @@ ol {
 @media (max-width: 991.98px) {
     .navbar-collapse {
         display: flex;
-        justify-content: space-between;
+        justify-content: center; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-info {
         display: flex;
         align-items: center;
+        justify-content: center; 
+        margin-top: 10px;
+        text-align: center; 
     }
 
     .contact-text {
-        text-align: right;
+        text-align: center; 
+    }
+
+    .navbar-toggler {
+        margin-left: auto; 
     }
 }
+
 
 
 /* hero */
