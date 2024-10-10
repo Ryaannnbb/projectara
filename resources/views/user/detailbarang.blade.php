@@ -34,7 +34,7 @@
      </div>
 
      <div class="bg">
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <nav class="navbar navbar-expand-lg">
              <div class="container-fluid">
                  <a class="navbar-brand" href="#">
                      <img src="img/navbar/company.png" alt="Company Logo">
@@ -45,9 +45,9 @@
                  </button>
 
                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                     <ul class="navbar-nav">
+                     <ul class="navbar-nav text-white">
                          <li class="nav-item">
-                             <a class="nav-link active" href="#">Home</a>
+                             <a class="nav-link active text-white" href="#">Home</a>
                          </li>
                          <li class="nav-item">
                              <a class="nav-link" href="#">Shop</a>
