@@ -20,9 +20,9 @@ class UserMiddleware
             if (Auth::user()->role === 'user') {
                 return $next($request);
             }
-            return redirect()->back()->with('error', "Anda tidak memiliki akses ke halaman ini");
+            return redirect()->back()->with('error_login', "Anda tidak memiliki akses ke halaman ini");
         }
 
-        return redirect('/')->with('error', "Anda harus login terlebih dahulu");
+        return redirect('/')->with('error_login', "Anda harus login terlebih dahulu");
     }
 }

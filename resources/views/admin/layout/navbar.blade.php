@@ -90,8 +90,8 @@
     <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
     <a class="navbar-brand me-1 me-sm-3" href="../../../index.html">
         <div class="d-flex align-items-center">
-        <div class="d-flex align-items-center"><img src="{{ asset('img/logo.png') }}" alt="phoenix" width="27" />
-            <p class="logo-text ms-2 d-none d-sm-block">Logo</p>
+        <div class="d-flex align-items-center"><img src="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}" alt="phoenix" width="60" />
+            <p class="logo-text ms-2 d-none d-sm-block">Asasta Indonesia </p>
         </div>
         </div>
     </a>
@@ -404,7 +404,7 @@
           <div class="card-body p-0">
             <div class="text-center pt-4 pb-3">
               <div class="avatar avatar-xl">
-                <img class="rounded-circle" src="{{ asset('img/storyset/useradminlogo.png') }}" alt="" />
+                <img class="rounded-circle" src="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}" alt="" />
               </div>
               <h6 class="mt-2 text-black">Admin</h6>
             </div>

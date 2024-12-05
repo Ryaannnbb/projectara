@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -35,11 +36,19 @@ class AuthController extends Controller
                 ->withInput($request->except('password'));
         }
 
+        $credentials = $request->only('email', 'password');
+        $user = User::where('email', $credentials['email'])->first();
+
+        if (!$user) {
+            return redirect()->back()->withInput($request->except('password'))->withErrors(['email' => 'Email ini belum terdaftar, silahkan gunakan email yang tersedia.']);
+        }
+
+
         if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
             if (auth()->user()->role == 'user') {
-                return redirect()->route('list_barang_user')->with('success', 'Anda berhasil masuk.');
+                return redirect()->route('list_barang_user')->with('success_login', 'Anda berhasil masuk.');
             } else if (auth()->user()->role == 'admin') {
-                return redirect()->route('kategori')->with('success', 'Anda berhasil masuk.');
+                return redirect()->route('kategori')->with('success_login', 'Anda berhasil masuk.');
             } else {
                 return redirect()->route('login')->with('error', 'Email atau password salah.');
             }
@@ -51,6 +60,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/')->with('success', 'Berhasil keluar');
+        return redirect('/')->with('success_login', 'Berhasil keluar');
     }
 }

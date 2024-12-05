@@ -34,6 +34,48 @@
         </script>
     @endif
 
+    @if (session('success_login'))
+    <script>
+        setTimeout(function() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 4000,
+                customClass: {
+                    title: 'green-sweet',
+                },
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: "{{ session('success_login') }}"
+            });
+        }, 1000);
+    </script>
+@endif
+
+@if (session('error_login'))
+    <script>
+        setTimeout(function() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 4000,
+                customClass: {
+                    title: 'red-sweet',
+                },
+            })
+
+            Toast.fire({
+                icon: 'error',
+                title: "{{ session('error_login') }}"
+            });
+        }, 1000);
+    </script>
+@endif
+
     {{-- @error('jumlah')
     <script>
         let timerInterval;

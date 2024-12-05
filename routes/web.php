@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 
 Route::middleware([RedirectMiddleware::class])->group(function () {
-    Route::controller(AuthController::class)->prefix('auth')->group(function () {
+    Route::controller(AuthController::class)->group(function () {
         Route::get('/login', 'login')->name('login');
         Route::post('/postlogin', 'postlogin')->name('postlogin');
         Route::get('/logout', 'logout')->name('logout');
@@ -57,7 +57,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}', 'update')->name('spices.update');
         Route::delete('delete/{id}', 'destroy')->name('spices.destroy');
     });
-    
+
     Route::controller(KategoriController::class)->prefix('kategori')->group(function () {
         Route::get('/', 'index')->name('kategori');
         Route::get('/create', 'create')->name('kategori.create');
@@ -66,7 +66,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}', 'update')->name('kategori.update');
         Route::delete('delete/{id}', 'destroy')->name('kategori.destroy');
     });
-    
+
     Route::controller(SeedsController::class)->prefix('seeds')->group(function () {
         Route::get('/', 'index')->name('seeds');
         Route::get('/create', 'create')->name('seeds.create');
@@ -75,7 +75,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}', 'update')->name('seeds.update');
         Route::delete('delete/{id}', 'destroy')->name('seeds.destroy');
     });
-    
+
     Route::controller(NutsController::class)->prefix('nuts')->group(function () {
         Route::get('/', 'index')->name('nuts');
         Route::get('/create', 'create')->name('nuts.create');
@@ -84,7 +84,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}', 'update')->name('nuts.update');
         Route::delete('delete/{id}', 'destroy')->name('nuts.destroy');
     });
-    
+
     Route::controller(SpecialProductController::class)->prefix('special_products')->group(function () {
         Route::get('/', 'index')->name('special_products');
         Route::get('/create', 'create')->name('special_products.create');
@@ -93,7 +93,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}', 'update')->name('special_products.update');
         Route::delete('delete/{id}', 'destroy')->name('special_products.destroy');
     });
-    
+
     Route::controller(StoreLocationsController::class)->prefix('store_locations')->group(function () {
         Route::get('/', 'index')->name('store_locations');
         Route::get('/create', 'create')->name('store_locations.create');
