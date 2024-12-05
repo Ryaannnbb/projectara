@@ -1,6 +1,9 @@
 @extends('admin.layout.app')
 
+@section('title', 'List Data Kategori')
+
 @section('main')
+
 @include('alert.sweetalert')
 <div class="content">
     <div class="mb-9">
@@ -42,6 +45,16 @@
                             </tr>
                         </thead>
                         <tbody class="list" id="products-table-body">
+                            @if ($kategori->isEmpty())
+                            <tr>
+                                <td colspan="8" class="text-center py-4">
+                                    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
+                                        <img src="{{ asset('img/storyset/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
+                                        <h3 class="mt-3 mb-0">Datanya masih kosong nih</h3>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endif
                             @foreach ($kategori as $kategoris)
                             <tr class="position-static">
                                 <td class="price align-middle fw-bold text-1000">

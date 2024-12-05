@@ -1,5 +1,7 @@
 @extends('admin.layout.app')
 
+@section('title', 'Tambah Special Product')
+
 @section('main')
     <div class="content">
         <form class="mb-9" action="{{ route('special_products.store') }}" method="POST" enctype="multipart/form-data">

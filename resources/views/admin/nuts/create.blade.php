@@ -1,5 +1,7 @@
 @extends('admin.layout.app')
 
+@section('title', 'Tambah Nuts Produk')
+
 @section('main')
     <div class="content">
         <form class="mb-9" action="{{ route('nuts.store') }}" method="POST" enctype="multipart/form-data">

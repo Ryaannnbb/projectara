@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 
-@section('title', 'List Seeds Produk')
+@section('title', 'List Store Locations')
 
 @section('main')
 @include('alert.sweetalert')
@@ -8,14 +8,14 @@
     <div class="mb-9">
         <div class="row g-3 mb-4">
             <div class="col-auto">
-                <h2 class="mb-0">Seeds</h2>
+                <h2 class="mb-0">Store Locations</h2>
             </div>
         </div>
         <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                     <span>All</span>
-                    <span class="text-700 fw-semi-bold">({{ $seeds->count() }})</span>
+                    <span class="text-700 fw-semi-bold">({{ $storeLocations->count() }})</span>
                 </a>
             </li>
         </ul>
@@ -24,8 +24,8 @@
             <div class="mb-4">
                 <div class="d-flex flex-wrap gap-3">
                     <div class="ms-xxl-auto">
-                        <a href="{{ route('seeds.create') }}" class="btn btn-primary" id="addBtn">
-                            <span class="fas fa-plus me-2"></span>Tambah Produk
+                        <a href="{{ route('store_locations.create') }}" class="btn btn-primary" id="addBtn">
+                            <span class="fas fa-plus me-2"></span>Tambah Store Location
                         </a>
                     </div>
                 </div>
@@ -38,16 +38,14 @@
                             <tr>
                                 <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">NO</th>
                                 <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;"></th>
-                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA PRODUK</th>
-                                <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">HARGA</th>
-                                <th class="sort align-middle ps-4" scope="col" style="width:150px;">KATEGORI</th>
-                                <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESKRIPSI</th>
+                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA KOTA</th>
+                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA TOKO</th>
                                 <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">DIBUAT PADA</th>
                                 <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                             </tr>
                         </thead>
                         <tbody class="list" id="products-table-body">
-                            @if ($seeds->isEmpty())
+                            @if ($storeLocations->isEmpty())
                             <tr>
                                 <td colspan="8" class="text-center py-4">
                                     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
@@ -57,47 +55,25 @@
                                 </td>
                             </tr>
                             @endif
-                            @foreach ($seeds as $item)
+                            @foreach ($storeLocations as $storeLocationss)
                             <tr class="position-static">
                                 <td class="price align-middle fw-bold text-1000">
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="align-middle white-space-nowrap py-0">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal{{ $item->id }}">
-                                        <img src="{{ asset('storage/seeds/' . $item->foto_produk) }}" alt="" width="53" />
-                                    </a>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="imageModal{{ $item->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $item->id }}" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="imageModalLabel{{ $item->id }}">{{ $item->nama_produk }}</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body text-center">
-                                                    <img src="{{ asset('storage/seeds/' . $item->foto_produk) }}" alt="" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="product align-middle ps-4">
                                     <p class="fw-semi-bold line-clamp-3 mb-0">
-                                        {{ $item->nama_produk }}
+                                        {{ $storeLocationss->nama_kota }}
                                     </p>
                                 </td>
-                                <td class="price align-middle white-space-nowrap text-end fw-bold text-700 ps-4">
-                                    Rp. {{ number_format($item->harga, 0, ',', '.') }}
-                                </td>
-                                <td class="category align-middle white-space-nowrap text-600 fs--1 ps-4 fw-semi-bold">
-                                    {{ $item->kategori->nama_kategori }}
-                                </td>
-                                <td class="vendor align-middle text-start fw-semi-bold ps-4">
-                                    {{ $item->deskripsi }}
+                                <td class="product align-middle ps-4">
+                                    <p class="fw-semi-bold line-clamp-3 mb-0">
+                                        {{ $storeLocationss->nama_toko }}
+                                    </p>
                                 </td>
                                 <td class="time align-middle white-space-nowrap text-600 ps-4">
-                                    {{ $item->created_at->format('d M Y') }}
+                                    {{ $storeLocationss->created_at->format('d M Y') }}
                                 </td>
                                 <td class="align-middle white-space-nowrap text-end pe-0 ps-4 btn-reveal-trigger">
                                     <div class="font-sans-serif btn-reveal-trigger position-static">
@@ -105,12 +81,12 @@
                                             <span class="fas fa-ellipsis-h fs--2"></span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end py-2">
-                                            <a class="dropdown-item" href="{{ route('seeds.edit', $item->id) }}">Edit</a>
+                                            <a class="dropdown-item" href="{{ route('store_locations.edit', $storeLocationss->id) }}">Edit</a>
                                             <div class="dropdown-divider"></div>
-                                            <form action="{{ route('seeds.destroy', $item->id) }}" method="POST">
+                                            <form action="{{ route('store_locations.destroy', $storeLocationss->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="dropdown-item text-danger hapus">Remove</button>
+                                                <button type="submit" class="dropdown-item text-danger hapus">Hapus</button>
                                             </form>
                                         </div>
                                     </div>

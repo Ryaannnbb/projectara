@@ -1,5 +1,7 @@
     @extends('admin.layout.app')
 
+    @section('title', 'List Spices Produk')
+
     @section('main')
     @include('alert.sweetalert')
     <div class="content">
@@ -50,7 +52,7 @@
                                     <td colspan="8" class="text-center py-4">
                                         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
                                             <img src="{{ asset('img/storyset/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
-                                            <h3 class="mt-3 mb-0">Data masih kosong nih</h3>
+                                            <h3 class="mt-3 mb-0">Datanya masih kosong nih</h3>
                                         </div>
                                     </td>
                                 </tr>

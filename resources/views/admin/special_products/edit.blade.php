@@ -1,5 +1,7 @@
 @extends('admin.layout.app')
 
+@section('title', 'Edit Special Product')
+
 @section('main')
     <div class="content">
         <form class="mb-9" action="{{ route('special_products.update', $specialProduct->id) }}" method="POST" enctype="multipart/form-data">

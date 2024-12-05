@@ -1,5 +1,7 @@
 @extends('admin.layout.app')
 
+@section('title', 'Edit Seeds Produk')
+
 @section('main')
     <div class="content">
         <form class="mb-9" action="{{ route('seeds.update', $seeds->id) }}" method="POST" enctype="multipart/form-data">
