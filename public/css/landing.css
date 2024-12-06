@@ -291,7 +291,7 @@
     min-height: 100vh;
 }
 
-.container {
+.contain{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -534,42 +534,3 @@
     }
 }
 /* navbar */
-/* Contact Info Styling (Horizontal) */
-.header__contact {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;  /* Space between icons and text */
-}
-
-.contact-info {
-    font-size: 14px;
-    text-align: left;
-}
-
-.contact-info span {
-    font-weight: bold;
-}
-
-.contact-info p {
-    font-size: 12px;
-    color: #777;
-}
-
-.contact-icon i, .user-icon i {
-    font-size: 20px;
-    color: #28a745;
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    .header__contact {
-        display: flex; /* Keep it displayed on mobile */
-        justify-content: center; /* Center align for smaller screens */
-        gap: 10px;
-    }
-
-    .contact-info {
-        display: none; /* Hide text on mobile */
-    }
-}

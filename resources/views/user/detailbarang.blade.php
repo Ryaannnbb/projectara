@@ -36,7 +36,12 @@
         <div class="loader"></div>
     </div>
 
-   <!-- Humberger Begin -->
+ <!-- Page Preloder -->
+{{-- <div id="preloder">
+    <div class="loader"></div>
+</div> --}}
+
+<!-- Humberger Begin -->
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
@@ -96,62 +101,117 @@
 <!-- Humberger End -->
 
 <!-- Header Section Begin -->
-<!-- Header Section -->
 <header class="header">
     <div class="container">
-        <div class="row align-items-center">
-            <!-- Logo Section -->
-            <div class="col-2">
+        <div class="row">
+            <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt="Logo" width="100"></a>
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
                 </div>
             </div>
-
-            <!-- Navbar Section -->
-            <div class="col-4">
+            <div class="col-lg-6">
                 <nav class="header__menu">
-                    <ul class="navbar-nav">
+                    <ul>
                         <li><a href="./index.html">Home</a></li>
                         <li class="active"><a href="./shop-grid.html">Shop</a></li>
-                        <li><a href="#">Special Product</a></li>
+                        <li><a href="#">Pages</a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./shop-details.html">Shop Details</a></li>
+                                <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                <li><a href="./checkout.html">Check Out</a></li>
+                                <li><a href="./blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-
-            <!-- Contact Info Section -->
-            <div class="col-6 d-flex justify-content-end ">
-                <div class="header__contact">
-                    <div class="contact-icon me-3">
-                        <i class="fa fa-phone"></i>
-                    </div>
-                    <div class="contact-info me-3">
-                        <span>+62 1234 5678</span>
-                        <p>Support 24/7 time</p>
-                    </div>
-                    <div class="user-icon">
-                        <i class="fa fa-user"></i>
-                    </div>
+            <div class="col-lg-3">
+                <div class="header__cart">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                    </ul>
+                    <div class="header__cart__price">item: <span>$150.00</span></div>
                 </div>
             </div>
         </div>
-         <!-- Mobile Menu Toggle -->
-         <div class="humberger__open">
+        <div class="humberger__open">
             <i class="fa fa-bars"></i>
         </div>
     </div>
 </header>
+<!-- Header Section End -->
 
+<!-- Hero Section Begin -->
+<section class="hero hero-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>All Product</span>
+                    </div>
+                    <ul>
+                        <li><p>Spices</p></li>
+                        <li><p>Seeds</p></li>
+                        <li><p>Nuts</p></li>
+                        <li><p>Special Product</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    {{-- <div class="hero__search__form">
+                        <form action="#">
+                            <div class="hero__search__categories">
+                                All Categories
+                                <span class="arrow_carrot-down"></span>
+                            </div>
+                            <input type="text" placeholder="What do yo u need?">
+                            <button type="submit" class="site-btn">SEARCH</button>
+                        </form>
+                    </div> --}}
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>+65 11.188.888</h5>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
 
-
-
-
-
-
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg custom-bg" data-setbg="{{ asset('img/storyset/bgspices.webp') }}" style="background-position: center; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Asasta Indonesia</h2>
+                    {{-- <div class="breadcrumb__option">
+                        <a href="./index.html">Home</a>
+                        <span>Shop</span>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
 
 
     </nav>
     <section class="hero-section">
-        <div class="container">
+        <div class="contain">
             <div class="text-content">
                 <p class="text-white">WELCOME TO MY WEBSITE</p>
                 <h1 class="linear">ORGANIC FOODS AND VEGETABLES</h1>
@@ -168,7 +228,6 @@
         </div>
     </section>
     </div>
-
 
     <section class="img-circle my-5">
         <div class="container text-center">
@@ -212,10 +271,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- About Our Company Section -->
     <section class="about-section">
@@ -277,47 +332,7 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-section contact-detail">
-                <h3>CONTACT DETAIL</h3>
-                <p>PT SINGARAJA NUSANTARA JAWARA</p>
-                <p>Jl. Raya Suharto 01 Sukorajo</p>
-                <p>Central Java Indonesian</p>
-                <p>No.Tlp: 087855841237</p>
-                <p>Email: singaraja.nj@gmail.com</p>
-            </div>
-            <div class="footer-section quick-links">
-                <h3>QUIKS LINK</h3>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">PAGES</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="footer-section certification-event">
-                <h3>CERTIFICATION & EVENT</h3>
-                <div class="cert-images">
-                    <img src="img/cert1.png" alt="Certification 1">
-                    <img src="img/cert2.png" alt="Certification 2">
-                    <img src="img/cert3.png" alt="Certification 3">
-                    <img src="img/cert4.png" alt="Certification 4">
-                    <img src="img/cert5.png" alt="Certification 5">
-                    <img src="img/cert6.png" alt="Certification 6">
-                    <img src="img/cert7.png" alt="Certification 7">
-                    <img src="img/cert8.png" alt="Certification 8">
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-
-
-
-    <!-- Footer Section End -->
+   
 
     <!-- Js Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
