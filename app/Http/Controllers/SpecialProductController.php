@@ -57,7 +57,7 @@ class SpecialProductController extends Controller
 
         $file = $request->file('foto_produk');
         $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('storage/special_products'), $fileName);
+        $file->move(public_path('storage/product'), $fileName);
 
         SpecialProduct::create([
             'kategori_id' => $request->kategori_id,
@@ -119,13 +119,13 @@ class SpecialProductController extends Controller
         $specialProduct = SpecialProduct::findOrFail($id);
 
         if ($request->hasFile('foto_produk')) {
-            if (file_exists(public_path('storage/special_products/' . $specialProduct->foto_produk))) {
-                unlink(public_path('storage/special_products/' . $specialProduct->foto_produk));
+            if (file_exists(public_path('storage/product/' . $specialProduct->foto_produk))) {
+                unlink(public_path('storage/product/' . $specialProduct->foto_produk));
             }
 
             $file = $request->file('foto_produk');
             $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('storage/special_products'), $fileName);
+            $file->move(public_path('storage/product'), $fileName);
             $specialProduct->foto_produk = $fileName;
         }
 
@@ -146,8 +146,8 @@ class SpecialProductController extends Controller
     public function destroy(string $id)
     {
         $specialProduct = SpecialProduct::findOrFail($id);
-        if (file_exists(public_path('storage/special_products/' . $specialProduct->foto_produk))) {
-            unlink(public_path('storage/special_products/' . $specialProduct->foto_produk));
+        if (file_exists(public_path('storage/product/' . $specialProduct->foto_produk))) {
+            unlink(public_path('storage/product/' . $specialProduct->foto_produk));
         }
 
         $specialProduct->delete();

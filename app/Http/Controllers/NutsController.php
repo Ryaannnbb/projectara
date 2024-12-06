@@ -57,7 +57,7 @@ class NutsController extends Controller
 
         $file = $request->file('foto_produk');
         $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('storage/nuts'), $fileName);
+        $file->move(public_path('storage/product'), $fileName);
 
         Nuts::create([
             'kategori_id' => $request->kategori_id,
@@ -118,9 +118,16 @@ class NutsController extends Controller
 
         $nuts = Nuts::findOrFail($id);
 
-        $file = $request->file('foto_produk');
-        $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('storage/nuts'), $fileName);
+        if ($request->hasFile('foto_produk')) {
+            if (file_exists(public_path('storage/product/' . $nuts->foto_produk))) {
+                unlink(public_path('storage/product/' . $nuts->foto_produk));
+            }
+
+            $file = $request->file('foto_produk');
+            $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('storage/product'), $fileName);
+            $nuts->foto_produk = $fileName;
+        }
 
         $nuts->update([
             'kategori_id' => $request->kategori_id,
@@ -139,8 +146,8 @@ class NutsController extends Controller
     public function destroy(string $id)
     {
         $nuts = Nuts::findOrFail($id);
-        if (file_exists(public_path('storage/nuts/' . $nuts->foto_produk))) {
-            unlink(public_path('storage/nuts/' . $nuts->foto_produk));
+        if (file_exists(public_path('storage/product/' . $nuts->foto_produk))) {
+            unlink(public_path('storage/product/' . $nuts->foto_produk));
         }
         $nuts->delete();
 

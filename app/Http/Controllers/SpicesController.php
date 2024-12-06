@@ -58,7 +58,7 @@ class SpicesController extends Controller
 
         $file = $request->file('foto_produk');
         $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('storage/spices'), $fileName);
+        $file->move(public_path('storage/product'), $fileName);
 
         Spices::create([
             'kategori_id' => $request->kategori_id,
@@ -119,13 +119,13 @@ class SpicesController extends Controller
         $spices = Spices::findOrFail($id);
 
         if ($request->hasFile('foto_produk')) {
-            if (file_exists(public_path('storage/spices/' . $spices->foto_produk))) {
-                unlink(public_path('storage/spices/' . $spices->foto_produk));
+            if (file_exists(public_path('storage/product/' . $spices->foto_produk))) {
+                unlink(public_path('storage/product/' . $spices->foto_produk));
             }
 
             $file = $request->file('foto_produk');
             $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('storage/spices'), $fileName);
+            $file->move(public_path('storage/product'), $fileName);
             $spices->foto_produk = $fileName;
         }
 
@@ -146,8 +146,8 @@ class SpicesController extends Controller
     {
         $spices = Spices::findOrFail($id);
 
-        if (file_exists(public_path('storage/spices/' . $spices->foto_produk))) {
-            unlink(public_path('storage/spices/' . $spices->foto_produk));
+        if (file_exists(public_path('storage/product/' . $spices->foto_produk))) {
+            unlink(public_path('storage/product/' . $spices->foto_produk));
         }
 
         $spices->delete();

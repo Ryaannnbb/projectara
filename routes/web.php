@@ -37,15 +37,9 @@ Route::middleware([RedirectMiddleware::class])->group(function () {
     });
 });
 
-Route::middleware([UserMiddleware::class])->group(function () {
-    Route::controller(ListBarangUserController::class)->prefix('list_barang_user')->group(function () {
-        Route::get('/', 'index')->name('list_barang_user');
-        Route::get('/create', 'create')->name('list_barang_user.create');
-        Route::post('/store', 'store')->name('list_barang_user.store');
-        Route::get('edit/{id}', 'edit')->name('list_barang_user.edit');
-        Route::put('update/{id}', 'update')->name('list_barang_user.update');
-        Route::delete('delete/{id}', 'destroy')->name('list_barang_user.destroy');
-    });
+Route::controller(ListBarangUserController::class)->prefix('shop')->group(function () {
+    Route::get('/', 'index')->name('shop');
+    Route::get('/{id}', 'show')->name('shop.show');
 });
 
 Route::middleware([AdminMiddleware::class])->group(function () {

@@ -64,7 +64,7 @@
                                 </td>
                                 <td class="align-middle white-space-nowrap py-0">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal{{ $item->id }}">
-                                        <img src="{{ asset('storage/seeds/' . $item->foto_produk) }}" alt="" width="53" />
+                                        <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="" width="53" />
                                     </a>
 
                                     <!-- Modal -->
@@ -76,7 +76,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body text-center">
-                                                    <img src="{{ asset('storage/seeds/' . $item->foto_produk) }}" alt="" class="img-fluid" />
+                                                    <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="" class="img-fluid" />
                                                 </div>
                                             </div>
                                         </div>

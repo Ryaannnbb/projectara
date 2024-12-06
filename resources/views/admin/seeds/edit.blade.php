@@ -52,7 +52,7 @@
                             gambar</strong>
                         @if ($seeds->foto_produk)
                             <img class="mt-2" id="current-image"
-                                src="{{ asset('storage/seeds/' . $seeds->foto_produk) }}" alt="Current Image"
+                                src="{{ asset('storage/product/' . $seeds->foto_produk) }}" alt="Current Image"
                                 style="width: 100%; height: auto; border-radius: 5px">
                         @endif
                         @error('foto_produk')

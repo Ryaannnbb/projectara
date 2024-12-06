@@ -57,7 +57,7 @@ class SeedsController extends Controller
 
         $file = $request->file('foto_produk');
         $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('storage/seeds'), $fileName);
+        $file->move(public_path('storage/product'), $fileName);
 
         Seeds::create([
             'kategori_id' => $request->kategori_id,
@@ -118,13 +118,13 @@ class SeedsController extends Controller
         $seeds = Seeds::findOrFail($id);
 
         if ($request->hasFile('foto_produk')) {
-            if (file_exists(public_path('storage/seeds/' . $seeds->foto_produk))) {
-                unlink(public_path('storage/seeds/' . $seeds->foto_produk));
+            if (file_exists(public_path('storage/product/' . $seeds->foto_produk))) {
+                unlink(public_path('storage/product/' . $seeds->foto_produk));
             }
 
             $file = $request->file('foto_produk');
             $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('storage/seeds'), $fileName);
+            $file->move(public_path('storage/product'), $fileName);
             $seeds->foto_produk = $fileName;
         }
 
@@ -144,8 +144,8 @@ class SeedsController extends Controller
     public function destroy(string $id)
     {
         $seeds = Seeds::findOrFail($id);
-        if (file_exists(public_path('storage/seeds/' . $seeds->foto_produk))) {
-            unlink(public_path('storage/seeds/' . $seeds->foto_produk));
+        if (file_exists(public_path('storage/product/' . $seeds->foto_produk))) {
+            unlink(public_path('storage/product/' . $seeds->foto_produk));
         }
         $seeds->delete();
 
