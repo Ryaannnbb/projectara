@@ -533,4 +533,61 @@
         align-items: center;
     }
 }
-/* navbar */
+/* kota */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .trade-show-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 25vh;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+  }
+
+  .header i {
+    font-size: 1.5em;
+    color: #333;
+  }
+
+  .participation-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .participation-list li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+   
+  }
+
+  .participation-list h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #444;
+  }
+
+  .participation-list p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #777;
+  }
