@@ -375,7 +375,42 @@
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section contact-detail">
+                <h3>CONTACT DETAIL</h3>
+                <p>PT SINGARAJA NUSANTARA JAWARA</p>
+                <p>Jl. Raya Suharto 01 Sukorajo</p>
+                <p>Central Java Indonesian</p>
+                <p>No.Tlp: 087855841237</p>
+                <p>Email: singaraja.nj@gmail.com</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>QUIKS LINK</h3>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">PAGES</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-section certification-event">
+                <h3>CERTIFICATION & EVENT</h3>
+                <div class="cert-images">
+                    <img src="img/cert1.png" alt="Certification 1">
+                    <img src="img/cert2.png" alt="Certification 2">
+                    <img src="img/cert3.png" alt="Certification 3">
+                    <img src="img/cert4.png" alt="Certification 4">
+                    <img src="img/cert5.png" alt="Certification 5">
+                    <img src="img/cert6.png" alt="Certification 6">
+                    <img src="img/cert7.png" alt="Certification 7">
+                    <img src="img/cert8.png" alt="Certification 8">
+                </div>
+            </div>
 
+        </div>
+    </footer>
 
     <!-- Js Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
