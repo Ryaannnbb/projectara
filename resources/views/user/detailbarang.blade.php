@@ -15,18 +15,18 @@
     <!-- Css Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-     <link rel="stylesheet" href="css/style.css" type="text/css">
-     <link rel="stylesheet" href="css/landing.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-         type="text/css">
- </head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/landing.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        type="text/css">
+</head>
 
 
 <body>
@@ -36,60 +36,139 @@
         <div class="loader"></div>
     </div>
 
-    <div class="bg">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/navbar/company.png" alt="Company Logo">
-                </a>
+   <!-- Humberger Begin -->
+<div class="humberger__menu__overlay"></div>
+<div class="humberger__menu__wrapper">
+    <div class="humberger__menu__logo">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+    </div>
+    <div class="humberger__menu__cart">
+        <ul>
+            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+        </ul>
+        <div class="header__cart__price">item: <span>$150.00</span></div>
+    </div>
+    <div class="humberger__menu__widget">
+        <div class="header__top__right__language">
+            <img src="img/language.png" alt="">
+            <div>English</div>
+            <span class="arrow_carrot-down"></span>
+            <ul>
+                <li><a href="#">Spanis</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+        <div class="header__top__right__auth">
+            <a href="#"><i class="fa fa-user"></i> Login</a>
+        </div>
+    </div>
+    <nav class="humberger__menu__nav mobile-menu">
+        <ul>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./shop-grid.html">Shop</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="header__menu__dropdown">
+                    <li><a href="./shop-details.html">Shop Details</a></li>
+                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                    <li><a href="./checkout.html">Check Out</a></li>
+                    <li><a href="./blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+    <div class="header__top__right__social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    </div>
+    <div class="humberger__menu__contact">
+        <ul>
+            <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+            <li>Free Shipping for all Order of $99</li>
+        </ul>
+    </div>
+</div>
+<!-- Humberger End -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Special Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="contact-info">
-                                <span class="icon">&#128100;</span>
-                                <div class="contact-text">
-                                    <p class="text-white">+62 1234 5678</p>
-                                    <p class="text-white">support 24/7</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+<!-- Header Section Begin -->
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Logo Section -->
+            <div class="col-2">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="img/logo.png" alt="Logo" width="100"></a>
                 </div>
             </div>
-        </nav>
-        <section class="hero-section">
-            <div class="container">
-                <div class="text-content">
-                    <p class="text-white">WELCOME TO MY WEBSITE</p>
-                    <h1 class="linear">ORGANIC FOODS AND VEGETABLES</h1>
-                    <p class="subtext text-white">100% NATURAL CONTAINING ORGANIC INGREDIENTS</p>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-yellow">SHOP NOW</a>
-                        <a href="#" class="btn btn-green">LEARN MORE</a>
+
+            <!-- Navbar Section -->
+            <div class="col-4">
+                <nav class="header__menu">
+                    <ul class="navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./shop-grid.html">Shop</a></li>
+                        <li><a href="#">Special Product</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="col-6 d-flex justify-content-end ">
+                <div class="header__contact">
+                    <div class="contact-icon me-3">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact-info me-3">
+                        <span>+62 1234 5678</span>
+                        <p>Support 24/7 time</p>
+                    </div>
+                    <div class="user-icon">
+                        <i class="fa fa-user"></i>
                     </div>
                 </div>
-                <div class="image-content">
-                    <div class="organic-badge">100% Organic</div>
-                    <img src="img/navbar/keranjang.png" alt="Organic Basket">
+            </div>
+        </div>
+         <!-- Mobile Menu Toggle -->
+         <div class="humberger__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <div class="text-content">
+                <p class="text-white">WELCOME TO MY WEBSITE</p>
+                <h1 class="linear">ORGANIC FOODS AND VEGETABLES</h1>
+                <p class="subtext text-white">100% NATURAL CONTAINING ORGANIC INGREDIENTS</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-yellow">SHOP NOW</a>
+                    <a href="#" class="btn btn-green">LEARN MORE</a>
                 </div>
             </div>
-        </section>
+            <div class="image-content">
+                <div class="organic-badge">100% Organic</div>
+                <img src="img/navbar/keranjang.png" alt="Organic Basket">
+            </div>
+        </div>
+    </section>
     </div>
+
 
     <section class="img-circle my-5">
         <div class="container text-center">
@@ -198,47 +277,43 @@
         </div>
     </section>
 
-    <!-- Footer Section Begin -->
-    <footer class="bg-primary text-white py-4">
+    <footer class="footer">
         <div class="container">
-            <div class="row d-flex justify-content-between">
-                <!-- Bagian kiri (Let's Talk) -->
-                <div class="col-md-6">
-                    <h3>Let's Talk</h3>
-                    <p>Every project starts with a chat. Joven leads our client conversations and will be happy to
-                        discuss your project. He will also pull in the right people from the team when needed.</p>
-                </div>
-                <!-- Bagian kanan (Email, Phone, Address dan Icons) -->
-                <div class="col-md-4">
-                    <ul class="list-unstyled">
-                        <li>
-                            <strong class="contact-label">Email:</strong>
-                            <a href="mailto:hello@buuuk.com" class="text-white contact-value">hello@buuuk.com</a>
-                        </li>
-                        <li>
-                            <strong class="contact-label">Phone:</strong>
-                            <a href="tel:+6598735984" class="text-white contact-value">(+65) 98735984</a>
-                        </li>
-                        <li>
-                            <strong class="contact-label">Address:</strong>
-                            <span class="text-white contact-value">
-                                1 Paya Lebar Link, #04-01, Paya Lebar Quarter, Singapore, 408533
-                            </span>
-                        </li>
-                    </ul>
-
-                    <!-- Social media icons dengan jarak antar ikon -->
-                    <div class="social-icons mt-3">
-                        <a href="#" class="text-white social-icon"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="#" class="text-white social-icon"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="#" class="text-white social-icon"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#" class="text-white social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
-                    </div>
-
+            <div class="footer-section contact-detail">
+                <h3>CONTACT DETAIL</h3>
+                <p>PT SINGARAJA NUSANTARA JAWARA</p>
+                <p>Jl. Raya Suharto 01 Sukorajo</p>
+                <p>Central Java Indonesian</p>
+                <p>No.Tlp: 087855841237</p>
+                <p>Email: singaraja.nj@gmail.com</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>QUIKS LINK</h3>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">PAGES</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-section certification-event">
+                <h3>CERTIFICATION & EVENT</h3>
+                <div class="cert-images">
+                    <img src="img/cert1.png" alt="Certification 1">
+                    <img src="img/cert2.png" alt="Certification 2">
+                    <img src="img/cert3.png" alt="Certification 3">
+                    <img src="img/cert4.png" alt="Certification 4">
+                    <img src="img/cert5.png" alt="Certification 5">
+                    <img src="img/cert6.png" alt="Certification 6">
+                    <img src="img/cert7.png" alt="Certification 7">
+                    <img src="img/cert8.png" alt="Certification 8">
                 </div>
             </div>
+
         </div>
     </footer>
+
 
 
 
@@ -261,4 +336,4 @@
 
 </body>
 
- </html>
+</html>
