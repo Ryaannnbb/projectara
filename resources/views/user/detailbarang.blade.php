@@ -29,6 +29,17 @@
         type="text/css">
 </head>
 
+<style>
+    .hilang {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .hilang {
+            display: block;
+        }
+    }
+</style>
 
 <body>
     @include('alert.sweetalert')
@@ -73,16 +84,7 @@
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./blog.html">Special Product</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -115,26 +117,15 @@
                         <ul>
                             <li><a href="./index.html">Home</a></li>
                             <li class="active"><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./blog.html">Special Produk</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <a href=""><i class="bi bi-person-fill hilang"></i></a>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
                 </div>
             </div>
@@ -202,6 +193,7 @@
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg custom-bg" data-setbg="{{ asset('img/storyset/bgspices.webp') }}"
         style="background-position: center; background-size: cover;">
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -215,6 +207,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     <!-- Breadcrumb Section End -->
 
@@ -353,15 +346,18 @@
     <!-- Company Location -->
     <section class="company-section">
         <div class="company-image">
-            <img src="img/section/map.png" alt="Company Image">
+            <img src="img/section/map.png" alt="Company Location Image">
         </div>
         <div class="company-content">
             <h2>COMPANY LOCATION</h2>
-            <p>Vivamus et lectus lacus. Phasellus tincidunt orci quis nisi aliquet imperdiet. Nunc at urna leo posuere
+            <p>
+                Vivamus et lectus lacus. Phasellus tincidunt orci quis nisi aliquet imperdiet. Nunc at urna leo posuere
                 pharetra vitae consectetur eros. Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
+                fames ac turpis egestas.
+            </p>
         </div>
     </section>
+
 
     <!-- Legal -->
     <section class="legality">
