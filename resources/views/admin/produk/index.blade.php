@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 
-@section('title', 'List Nuts Produk')
+@section('title', 'List Produk')
 
 @section('main')
 @include('alert.sweetalert')
@@ -8,14 +8,14 @@
     <div class="mb-9">
         <div class="row g-3 mb-4">
             <div class="col-auto">
-                <h2 class="mb-0">Nuts</h2>
+                <h2 class="mb-0">Products</h2>
             </div>
         </div>
         <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                     <span>All</span>
-                    <span class="text-700 fw-semi-bold">({{ $nuts->count() }})</span>
+                    <span class="text-700 fw-semi-bold">({{ $produk->count() }})</span>
                 </a>
             </li>
         </ul>
@@ -24,7 +24,7 @@
             <div class="mb-4">
                 <div class="d-flex flex-wrap gap-3">
                     <div class="ms-xxl-auto">
-                        <a href="{{ route('nuts.create') }}" class="btn btn-primary" id="addBtn">
+                        <a href="{{ route('produk.create') }}" class="btn btn-primary" id="addBtn">
                             <span class="fas fa-plus me-2"></span>Tambah Produk
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                             </tr>
                         </thead>
                         <tbody class="list" id="products-table-body">
-                            @if ($nuts->isEmpty())
+                            @if ($produk->isEmpty())
                             <tr>
                                 <td colspan="8" class="text-center py-4">
                                     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
@@ -58,14 +58,20 @@
                                 </td>
                             </tr>
                             @endif
-                            @foreach ($nuts as $item)
+                            @foreach ($produk as $item)
                             <tr class="position-static">
                                 <td class="price align-middle fw-bold text-1000">
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="align-middle white-space-nowrap py-0">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal{{ $item->id }}">
-                                        <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="" width="53" />
+                                        @if (filter_var($item->foto_produk, FILTER_VALIDATE_URL))
+                                            {{-- Jika URL berasal dari Faker (gambar online) --}}
+                                            <img src="{{ $item->foto_produk }}" alt="Gambar Produk" width="53" />
+                                        @else
+                                            {{-- Jika gambar lokal (disimpan di storage) --}}
+                                            <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="Gambar Produk" width="53" />
+                                        @endif
                                     </a>
 
                                     <!-- Modal -->
@@ -77,7 +83,11 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body text-center">
-                                                    <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="" class="img-fluid" />
+                                                    @if (filter_var($item->foto_produk, FILTER_VALIDATE_URL))
+                                                        <img src="{{ $item->foto_produk }}" alt="" class="img-fluid" />
+                                                    @else
+                                                        <img src="{{ asset('storage/product/' . $item->foto_produk) }}" alt="" class="img-fluid" />
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -109,9 +119,9 @@
                                             <span class="fas fa-ellipsis-h fs--2"></span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end py-2">
-                                            <a class="dropdown-item" href="{{ route('nuts.edit', $item->id) }}">Edit</a>
+                                            <a class="dropdown-item" href="{{ route('produk.edit', $item->id) }}">Edit</a>
                                             <div class="dropdown-divider"></div>
-                                            <form action="{{ route('nuts.destroy', $item->id) }}" method="POST">
+                                            <form action="{{ route('produk.destroy', $item->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="dropdown-item text-danger hapus">Remove</button>

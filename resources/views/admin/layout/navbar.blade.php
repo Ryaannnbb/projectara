@@ -15,6 +15,17 @@
                     </a>
                     <div class="nav-item-wrapper">
                 <li class="nav-item">
+                    <a class="nav-link  {{ request()->routeIs('produk') ? 'active' : '' }}"
+                        href="{{ route('produk') }}" data-bs-toggle="" aria-expanded="false">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span data-feather="pie-chart"></span>
+                            </span>
+                            <span class="nav-link-text">Product</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link  {{ request()->routeIs('kategori') ? 'active' : '' }}"
                         href="{{ route('kategori') }}" data-bs-toggle="" aria-expanded="false">
                         <div class="d-flex align-items-center">
@@ -22,39 +33,6 @@
                                 <span data-feather="pie-chart"></span>
                             </span>
                             <span class="nav-link-text">Kategori</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('spices') ? 'active' : '' }}" href="{{ route('spices') }}"
-                        data-bs-toggle="" aria-expanded="false">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span data-feather="pie-chart"></span>
-                            </span>
-                            <span class="nav-link-text">Spices</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('seeds') ? 'active' : '' }}" href="{{ route('seeds') }}"
-                        data-bs-toggle="" aria-expanded="false">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span data-feather="pie-chart"></span>
-                            </span>
-                            <span class="nav-link-text">Seeds</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('nuts') ? 'active' : '' }}" href="{{ route('nuts') }}"
-                        data-bs-toggle="" aria-expanded="false">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span data-feather="pie-chart"></span>
-                            </span>
-                            <span class="nav-link-text">Nuts</span>
                         </div>
                     </a>
                 </li>

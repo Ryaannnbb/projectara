@@ -20,7 +20,7 @@
                             <div class="latest-product__text">
                                 <h4>Latest Products</h4>
                                 <div class="latest-product__slider owl-carousel">
-                                    @foreach ($latestProducts->chunk(3) as $productChunk)
+                                    @foreach ($latestSpecialProducts->chunk(3) as $productChunk)
                                     <div class="latest-prdouct__slider__item">
                                         @foreach ($productChunk as $product)
                                             <div class="latest-product__item">
@@ -54,7 +54,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>{{ $produk->count() }}</span> Products found</h6>
+                                    <h6><span>{{ $specialProducts->count() }}</span> Products found</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
@@ -66,13 +66,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        @if ($produk->count() > 0)
-                            @foreach ($produk as $shop)
+                        @if ($specialProducts->count() > 0)
+                            @foreach ($specialProducts as $shop)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="{{ asset('storage/product/' . $shop->foto_produk) }}">
                                         <ul class="product__item__pic__hover">
-                                            <li><a href="{{ route('shop.show', $shop->id) }}"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="{{ route('special_product_list.show', $shop->id) }}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">

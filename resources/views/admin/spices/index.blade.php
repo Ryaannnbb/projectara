@@ -40,6 +40,7 @@
                                     <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;"></th>
                                     <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA PRODUK</th>
                                     <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">HARGA</th>
+                                    <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">BERAT</th>
                                     <th class="sort align-middle ps-4" scope="col" style="width:150px;">KATEGORI</th>
                                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESKRIPSI</th>
                                     <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">DIBUAT PADA</th>
@@ -89,6 +90,9 @@
                                     </td>
                                     <td class="price align-middle white-space-nowrap text-end fw-bold text-700 ps-4">
                                         Rp. {{ number_format($item->harga, 0, ',', '.') }}
+                                    </td>
+                                    <td class="price align-middle white-space-nowrap text-end fw-bold text-700 ps-4">
+                                        {{ $item->berat }} Kg
                                     </td>
                                     <td class="category align-middle white-space-nowrap text-600 fs--1 ps-4 fw-semi-bold">
                                         {{ $item->kategori->nama_kategori }}

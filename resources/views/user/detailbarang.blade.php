@@ -43,16 +43,10 @@
 
 <body>
     @include('alert.sweetalert')
-    <!-- Page Preloder -->
+    {{-- <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
-    </div>
-
-    <!-- Page Preloder -->
-    {{-- <div id="preloder">
-    <div class="loader"></div>
-</div> --}}
-
+    </div> --}}
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
@@ -82,9 +76,9 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="./blog.html">Special Product</a></li>
+                <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+                <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
+                <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -115,9 +109,9 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li class="active"><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="./blog.html">Special Produk</a></li>
+                            <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+                            <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
+                            <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -189,28 +183,6 @@
         </div>
     </section>
     <!-- Hero Section End -->
-
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg custom-bg" data-setbg="{{ asset('img/storyset/bgspices.webp') }}"
-        style="background-position: center; background-size: cover;">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Asasta Indonesia</h2>
-                        {{-- <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
-                        <span>Shop</span>
-                    </div> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- Breadcrumb Section End -->
-
 
     </nav>
     <section class="hero-section">

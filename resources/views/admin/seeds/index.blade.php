@@ -25,7 +25,7 @@
                 <div class="d-flex flex-wrap gap-3">
                     <div class="ms-xxl-auto">
                         <a href="{{ route('seeds.create') }}" class="btn btn-primary" id="addBtn">
-                            <span class="fas fa-plus me-2"></span>Tambah Produk
+                            <span class="fas fa-plus me-2"></span>Tambah Seeds Produk
                         </a>
                     </div>
                 </div>
@@ -39,6 +39,7 @@
                                 <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">NO</th>
                                 <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;"></th>
                                 <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA PRODUK</th>
+                                <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">HARGA</th>
                                 <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">HARGA</th>
                                 <th class="sort align-middle ps-4" scope="col" style="width:150px;">KATEGORI</th>
                                 <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESKRIPSI</th>
@@ -89,6 +90,9 @@
                                 </td>
                                 <td class="price align-middle white-space-nowrap text-end fw-bold text-700 ps-4">
                                     Rp. {{ number_format($item->harga, 0, ',', '.') }}
+                                </td>
+                                <td class="price align-middle white-space-nowrap text-end fw-bold text-700 ps-4">
+                                    {{ $item->berat }} Kg
                                 </td>
                                 <td class="category align-middle white-space-nowrap text-600 fs--1 ps-4 fw-semi-bold">
                                     {{ $item->kategori->nama_kategori }}

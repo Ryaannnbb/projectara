@@ -38,6 +38,7 @@ class SpecialProductController extends Controller
             'nama_produk' => 'required|string|max:255',
             'harga' => 'required|integer|min:0',
             'deskripsi' => 'required',
+            'berat' => 'required|numeric|min:0',
         ], [
             'kategori_id.required' => 'Kategori harus diisi.',
             'kategori_id.integer' => 'Kategori harus berupa angka.',
@@ -53,6 +54,9 @@ class SpecialProductController extends Controller
             'harga.integer' => 'Harga harus berupa angka.',
             'harga.min' => 'Harga tidak boleh negatif.',
             'deskripsi.required' => 'Deskripsi harus diisi.',
+            'berat.required' => 'Berat produk harus diisi.',
+            'berat.numeric' => 'Berat produk harus berupa angka.',
+            'berat.min' => 'Berat produk tidak boleh negatif.',
         ]);
 
         $file = $request->file('foto_produk');
@@ -64,6 +68,7 @@ class SpecialProductController extends Controller
             'foto_produk' => $fileName,
             'nama_produk' => $request->nama_produk,
             'harga' => $request->harga,
+            'berat' => $request->berat,
             'deskripsi' => $request->deskripsi,
         ]);
 
@@ -99,6 +104,7 @@ class SpecialProductController extends Controller
             'nama_produk' => 'required|string|max:255',
             'harga' => 'required|integer|min:0',
             'deskripsi' => 'required',
+            'berat' => 'required|numeric|min:0',
         ], [
             'kategori_id.required' => 'Kategori harus diisi.',
             'kategori_id.integer' => 'Kategori harus berupa angka.',
@@ -114,6 +120,9 @@ class SpecialProductController extends Controller
             'harga.integer' => 'Harga harus berupa angka.',
             'harga.min' => 'Harga tidak boleh negatif.',
             'deskripsi.required' => 'Deskripsi harus diisi.',
+            'berat.required' => 'Berat produk harus diisi.',
+            'berat.numeric' => 'Berat produk harus berupa angka.',
+            'berat.min' => 'Berat produk tidak boleh negatif.',
         ]);
 
         $specialProduct = SpecialProduct::findOrFail($id);
@@ -134,6 +143,7 @@ class SpecialProductController extends Controller
             'foto_produk' => $fileName,
             'nama_produk' => $request->nama_produk,
             'harga' => $request->harga,
+            'berat' => $request->berat,
             'deskripsi' => $request->deskripsi,
         ]);
 

@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Seeds extends Model
+class Produk extends Model
 {
     use HasFactory;
-    protected $table = 'seeds';
+    protected $table = 'produks';
     protected $fillable = [
         'kategori_id',
         'foto_produk',
         'nama_produk',
         'harga',
-        'deskripsi'
+        'berat',
+        'deskripsi',
     ];
 
     public function kategori()
     {
         return $this->belongsTo(Kategori::class);
     }
-
 }

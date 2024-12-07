@@ -16,7 +16,7 @@
         </ul>
         <div class="header__cart__price">item: <span>$150.00</span></div>
     </div>
-    <div class="humberger__menu__widget">
+    {{-- <div class="humberger__menu__widget">
         <div class="header__top__right__language">
             <img src="img/language.png" alt="">
             <div>English</div>
@@ -29,21 +29,20 @@
         <div class="header__top__right__auth">
             <a href="#"><i class="fa fa-user"></i> Login</a>
         </div>
-    </div>
+    </div> --}}
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./shop-grid.html">Shop</a></li>
-            <li><a href="#">Pages</a>
+            <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+            <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
+            <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
+            {{-- <li><a href="#">Pages</a>
                 <ul class="header__menu__dropdown">
                     <li><a href="./shop-details.html">Shop Details</a></li>
                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                     <li><a href="./checkout.html">Check Out</a></li>
                     <li><a href="./blog-details.html">Blog Details</a></li>
                 </ul>
-            </li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            </li> --}}
         </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
@@ -74,28 +73,25 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li class="active"><a href="./shop-grid.html">Shop</a></li>
-                        <li><a href="#">Pages</a>
+                        <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+                        <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
+                        <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
+                        {{-- <li><a href="#">Pages</a>
                             <ul class="header__menu__dropdown">
                                 <li><a href="./shop-details.html">Shop Details</a></li>
                                 <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                 <li><a href="./checkout.html">Check Out</a></li>
                                 <li><a href="./blog-details.html">Blog Details</a></li>
                             </ul>
-                        </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        </li> --}}
                     </ul>
                 </nav>
             </div>
             <div class="col-lg-3">
                 <div class="header__cart">
                     <ul>
-                        <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        <a href=""><i class="fa-solid fa-user hilang"></i></a>
                     </ul>
-                    <div class="header__cart__price">item: <span>$150.00</span></div>
                 </div>
             </div>
         </div>
@@ -117,10 +113,18 @@
                         <span>All Product</span>
                     </div>
                     <ul>
-                        <li><p>Spices</p></li>
-                        <li><p>Seeds</p></li>
-                        <li><p>Nuts</p></li>
-                        <li><p>Special Product</p></li>
+                        <li>
+                            <p>Spices</p>
+                        </li>
+                        <li>
+                            <p>Seeds</p>
+                        </li>
+                        <li>
+                            <p>Nuts</p>
+                        </li>
+                        <li>
+                            <p>Special Product</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -153,7 +157,9 @@
 <!-- Hero Section End -->
 
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg custom-bg" data-setbg="{{ asset('img/storyset/bgspices.webp') }}" style="background-position: center; background-size: cover;">
+@if(request()->url() !== url('/'))
+<section class="breadcrumb-section set-bg custom-bg" data-setbg="{{ asset('img/storyset/bgspices.webp') }}"
+    style="background-position: center; background-size: cover;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -168,4 +174,5 @@
         </div>
     </div>
 </section>
+@endif
 <!-- Breadcrumb Section End -->

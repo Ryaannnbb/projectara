@@ -13,8 +13,13 @@ class Kategori extends Model
         'nama_kategori'
     ];
 
-    public function spices()
+    public function produk()
     {
-        return $this->hasMany(Spices::class);
+        return $this->hasMany(Produk::class);
+    }
+
+    public function specialProduct()
+    {
+        return $this->hasMany(SpecialProduct::class);
     }
 }

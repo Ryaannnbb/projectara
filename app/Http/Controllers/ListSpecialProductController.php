@@ -2,24 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nuts;
-use App\Models\Seeds;
-use App\Models\Produk;
-use App\Models\Spices;
 use Illuminate\Http\Request;
 use App\Models\SpecialProduct;
-use Illuminate\Support\Facades\DB;
 
-class ListBarangUserController extends Controller
+class ListSpecialProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $produk = Produk::all();
-        $latestProducts = $produk->sortByDesc('created_at')->take(6); // Ambil 6 produk terbaru
-        return view('user.list_barang_user', compact('produk', 'latestProducts'));
+        $specialProducts = SpecialProduct::all();
+        $latestSpecialProducts = $specialProducts->sortByDesc('created_at')->take(6);
+        return view('user.special_product_list', compact('specialProducts', 'latestSpecialProducts'));
     }
 
     /**
@@ -43,9 +38,9 @@ class ListBarangUserController extends Controller
      */
     public function show(string $id)
     {
-        $product = Produk::findOrFail($id);
-        $relatedProducts = Produk::where('kategori_id', $product->kategori_id)->where('id', '!=', $product->id)->get();
-        return view('user.detialproduk', compact('product', 'relatedProducts'));
+        $specialProduct = SpecialProduct::findOrFail($id);
+        $relatedSpecialProducts = SpecialProduct::where('kategori_id', $specialProduct->kategori_id)->where('id', '!=', $specialProduct->id)->get();
+        return view('user.detail_special_product', compact('specialProduct', 'relatedSpecialProducts'));
     }
 
     /**

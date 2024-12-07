@@ -14,6 +14,7 @@ class SpecialProduct extends Model
         'foto_produk',
         'nama_produk',
         'harga',
+        'berat',
         'deskripsi'
     ];
 

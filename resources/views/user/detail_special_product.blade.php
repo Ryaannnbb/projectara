@@ -8,7 +8,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large" src="{{ asset('storage/product/' . $product->foto_produk) }}"
+                            <img class="product__details__pic__item--large" src="{{ asset('storage/product/' . $specialProduct->foto_produk) }}"
                                 alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
@@ -25,13 +25,13 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3>{{ $product->nama_produk }}</h3>
-                        <div class="product__details__price">$50.00</div>
-                        <p>{{ $product->deskripsi }}</p>
+                        <h3>{{ $specialProduct->nama_produk }}</h3>
+                        <div class="product__details__price">Rp {{ number_format($specialProduct->harga, 0, ',', '.') }}</div>
+                        <p>{{ $specialProduct->deskripsi }}</p>
                         <a href="https://wa.me/6285236595332?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" class="primary-btn">BELI SEKARANG</a>
                         <ul>
                             <li><b>Ketersediaan</b> <span>In Stock</span></li>
-                            <li><b>Weight</b> <span>{{ $product->berat  }}Kg</span></li>
+                            <li><b>Weight</b> <span>{{ $specialProduct->berat  }} gram</span></li>
                         </ul>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Products Description</h6>
-                                    <p>{{ $product->deskripsi }}</p>
+                                    <p>{{ $specialProduct->deskripsi }}</p>
                                 </div>
                             </div>
                             {{-- <div class="tab-pane" id="tabs-2" role="tabpanel">
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach ($relatedProducts as $related)
+                @foreach ($relatedSpecialProducts as $related)
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="product__item">
                             <div class="product__item__pic">

@@ -122,6 +122,19 @@
                                         </div>
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
+                                                <label for="beratProduk" class="mb-2 text-1000">
+                                                    <h5>Berat (Kg)</h5>
+                                                </label>
+                                                <input class="form-control @error('berat') is-invalid @enderror"
+                                                    id="beratProduk" type="number" placeholder="Masukkan Berat"
+                                                    name="berat" value="{{ old('berat', $seeds->berat) }}" />
+                                                @error('berat')
+                                                    <strong class="invalid-feedback">{{ $message }}</strong>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-xl-12">
+                                            <div class="mb-4">
                                                 <label for="hargaProduk" class="mb-2 text-1000">
                                                     <h5>Harga</h5>
                                                 </label>

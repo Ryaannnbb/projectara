@@ -9,6 +9,8 @@ use App\Http\Controllers\SpicesController;
 use App\Http\Middleware\RedirectMiddleware;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ListBarangUserController;
+use App\Http\Controllers\ListSpecialProductController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\SpecialProductController;
 use App\Http\Controllers\StoreLocationsController;
 use App\Http\Middleware\AdminMiddleware;
@@ -42,14 +44,19 @@ Route::controller(ListBarangUserController::class)->prefix('shop')->group(functi
     Route::get('/{id}', 'show')->name('shop.show');
 });
 
+Route::controller(ListSpecialProductController::class)->prefix('special_product')->group(function () {
+    Route::get('/', 'index')->name('special_product_list');
+    Route::get('/{id}', 'show')->name('special_product_list.show');
+});
+
 Route::middleware([AdminMiddleware::class])->group(function () {
-    Route::controller(SpicesController::class)->prefix('spices')->group(function () {
-        Route::get('/', 'index')->name('spices');
-        Route::get('/create', 'create')->name('spices.create');
-        Route::post('/store', 'store')->name('spices.store');
-        Route::get('edit/{id}', 'edit')->name('spices.edit');
-        Route::put('update/{id}', 'update')->name('spices.update');
-        Route::delete('delete/{id}', 'destroy')->name('spices.destroy');
+    Route::controller(ProdukController::class)->prefix('produk')->group(function () {
+        Route::get('/', 'index')->name('produk');
+        Route::get('/create', 'create')->name('produk.create');
+        Route::post('/store', 'store')->name('produk.store');
+        Route::get('edit/{id}', 'edit')->name('produk.edit');
+        Route::put('update/{id}', 'update')->name('produk.update');
+        Route::delete('delete/{id}', 'destroy')->name('produk.destroy');
     });
 
     Route::controller(KategoriController::class)->prefix('kategori')->group(function () {
@@ -59,24 +66,6 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::get('edit/{id}', 'edit')->name('kategori.edit');
         Route::put('update/{id}', 'update')->name('kategori.update');
         Route::delete('delete/{id}', 'destroy')->name('kategori.destroy');
-    });
-
-    Route::controller(SeedsController::class)->prefix('seeds')->group(function () {
-        Route::get('/', 'index')->name('seeds');
-        Route::get('/create', 'create')->name('seeds.create');
-        Route::post('/store', 'store')->name('seeds.store');
-        Route::get('edit/{id}', 'edit')->name('seeds.edit');
-        Route::put('update/{id}', 'update')->name('seeds.update');
-        Route::delete('delete/{id}', 'destroy')->name('seeds.destroy');
-    });
-
-    Route::controller(NutsController::class)->prefix('nuts')->group(function () {
-        Route::get('/', 'index')->name('nuts');
-        Route::get('/create', 'create')->name('nuts.create');
-        Route::post('/store', 'store')->name('nuts.store');
-        Route::get('edit/{id}', 'edit')->name('nuts.edit');
-        Route::put('update/{id}', 'update')->name('nuts.update');
-        Route::delete('delete/{id}', 'destroy')->name('nuts.destroy');
     });
 
     Route::controller(SpecialProductController::class)->prefix('special_products')->group(function () {

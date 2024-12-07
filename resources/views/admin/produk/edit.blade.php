@@ -1,19 +1,17 @@
 @extends('admin.layout.app')
 
-@section('title', 'Edit Nuts Produk')
-
 @section('main')
     <div class="content">
-        <form class="mb-9" action="{{ route('nuts.update', $nuts->id) }}" method="POST" enctype="multipart/form-data">
+        <form class="mb-9" action="{{ route('produk.update', $produk->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="row g-3 flex-between-end mb-5">
                 <div class="col-auto">
-                    <h2 class="mb-2">Edit Nuts Produk</h2>
+                    <h2 class="mb-2">Edit Produk</h2>
                     <h5 class="text-700 fw-semi-bold">Silakan lengkapi form di bawah ini untuk mengedit produk.</h5>
                 </div>
                 <div class="col-auto">
-                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('nuts') }}">Batalkan</a>
+                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('produk') }}">Batalkan</a>
                     <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Simpan</button>
                 </div>
             </div>
@@ -25,7 +23,7 @@
                         </label>
                         <input class="form-control @error('nama_produk') is-invalid @enderror" id="namaProduk"
                             type="text" placeholder="Masukkan Nama Produk" name="nama_produk"
-                            value="{{ old('nama_produk', $nuts->nama_produk) }}" />
+                            value="{{ old('nama_produk', $produk->nama_produk) }}" />
                         @error('nama_produk')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
@@ -35,7 +33,7 @@
                             <h4 class="mb-3">Deskripsi Produk</h4>
                         </label>
                         <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsiProduk" name="deskripsi"
-                            rows="5" placeholder="Masukkan Deskripsi Produk">{{ old('deskripsi', $nuts->deskripsi) }}</textarea>
+                            rows="5" placeholder="Masukkan Deskripsi Produk">{{ old('deskripsi', $produk->deskripsi) }}</textarea>
                         @error('deskripsi')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
@@ -50,9 +48,9 @@
                             style="display: none; width: 100%; height: auto; border-radius: 5px">
                         <strong class="invalid-feedback" id="image-error" style="display: none;">Inputan ini harus berupa
                             gambar</strong>
-                        @if ($nuts->foto_produk)
+                        @if ($produk->foto_produk)
                             <img class="mt-2" id="current-image"
-                                src="{{ asset('storage/product/' . $nuts->foto_produk) }}" alt="Current Image"
+                                src="{{ asset('storage/product/' . $produk->foto_produk) }}" alt="Current Image"
                                 style="width: 100%; height: auto; border-radius: 5px">
                         @endif
                         @error('foto_produk')
@@ -110,7 +108,7 @@
                                                     @else
                                                         @foreach ($kategori as $kategoris)
                                                             <option value="{{ $kategoris->id }}"
-                                                                {{ old('kategori_id', $nuts->kategori_id) == $kategoris->id ? 'selected' : '' }}>
+                                                                {{ old('kategori_id', $produk->kategori_id) == $kategoris->id ? 'selected' : '' }}>
                                                                 {{ $kategoris->nama_kategori }}</option>
                                                         @endforeach
                                                     @endif
@@ -127,7 +125,7 @@
                                                 </label>
                                                 <input class="form-control @error('berat') is-invalid @enderror"
                                                     id="beratProduk" type="number" placeholder="Masukkan Berat"
-                                                    name="berat" value="{{ old('berat', $nuts->berat) }}" />
+                                                    name="berat" value="{{ old('berat', $produk->berat) }}" />
                                                 @error('berat')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
@@ -140,7 +138,7 @@
                                                 </label>
                                                 <input class="form-control @error('harga') is-invalid @enderror"
                                                     id="hargaProduk" type="number" placeholder="Masukkan Harga"
-                                                    name="harga" value="{{ old('harga', $nuts->harga) }}" />
+                                                    name="harga" value="{{ old('harga', $produk->harga) }}" />
                                                 @error('harga')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
