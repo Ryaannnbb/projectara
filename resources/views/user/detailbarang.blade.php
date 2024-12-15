@@ -30,6 +30,39 @@
 </head>
 
 <style>
+    .scroll-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        scroll-behavior: smooth;
+    }
+
+    .scroll-container .row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
+    .scroll-container .col-6 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .scroll-container .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
     .hilang {
         display: none;
     }
@@ -77,8 +110,10 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
-                <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
-                <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
+                <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a>
+                </li>
+                <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a
+                        href="{{ route('special_product_list') }}">Special Product</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -110,8 +145,10 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
-                            <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a href="{{ route('shop') }}">Product</a></li>
-                            <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a href="{{ route('special_product_list') }}">Special Product</a></li>
+                            <li class="{{ request()->routeIs('shop') ? 'active' : '' }}"><a
+                                    href="{{ route('shop') }}">Product</a></li>
+                            <li class="{{ request()->routeIs('special_product_list') ? 'active' : '' }}"><a
+                                    href="{{ route('special_product_list') }}">Special Product</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -217,35 +254,37 @@
                 </div>
                 <div class="w-100 d-none d-md-block"></div>
                 <div class="col-12">
-                    <!-- Circles with images and text below -->
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-md-2 text-center">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
-                                alt="Fruit 1" class="circle img-fluid">
-                            <p>Apple</p>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
-                                alt="Fruit 2" class="circle img-fluid">
-                            <p>Banana</p>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
-                                alt="Vegetable 1" class="circle img-fluid">
-                            <p>Carrot</p>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
-                                alt="Vegetable 2" class="circle img-fluid">
-                            <p>Broccoli</p>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s"
-                                alt="Fruit 3" class="circle img-fluid">
-                            <p>Orange</p>
+                    <!-- Horizontal Scroll Wrapper -->
+                    <div id="scrollWrapper" class="scroll-container">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/coriander.jpg" alt="Fruit 1" class="circle img-fluid">
+                                <p>Coriander</p>
+                            </div>
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/pecan.jpg" alt="Fruit 2" class="circle img-fluid">
+                                <p>Pecan</p>
+                            </div>
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/red_ginger.jpg" alt="Vegetable 1" class="circle img-fluid">
+                                <p>Red Ginger</p>
+                            </div>
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/turmeric.jpg" alt="Vegetable 2" class="circle img-fluid">
+                                <p>Turmeric</p>
+                            </div>
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/clove.jpg" alt="Fruit 3" class="circle img-fluid">
+                                <p>Clove</p>
+                            </div>
+                            <div class="col-6 col-md-2 text-center">
+                                <img src="img/hero/white_ginger.jpg" alt="Fruit 3" class="circle img-fluid">
+                                <p>White Ginger</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -330,7 +369,6 @@
         </div>
     </section>
 
-
     <!-- Legal -->
     <section class="legality">
         <div class="card">
@@ -394,7 +432,39 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // Enable drag-to-scroll
+        const scrollWrapper = document.getElementById('scrollWrapper');
 
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        scrollWrapper.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - scrollWrapper.offsetLeft;
+            scrollLeft = scrollWrapper.scrollLeft;
+            scrollWrapper.style.cursor = "grabbing";
+        });
+
+        scrollWrapper.addEventListener('mouseleave', () => {
+            isDown = false;
+            scrollWrapper.style.cursor = "default";
+        });
+
+        scrollWrapper.addEventListener('mouseup', () => {
+            isDown = false;
+            scrollWrapper.style.cursor = "default";
+        });
+
+        scrollWrapper.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - scrollWrapper.offsetLeft;
+            const walk = (x - startX) * 2;
+            scrollWrapper.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 </body>
 
 </html>
